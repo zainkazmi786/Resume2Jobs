@@ -62,11 +62,10 @@ __all__ = ['base_agent', 'agent', 'tools', 'memory']
 
 
 # ✅ Run the agent with input
+
 if __name__ == "__main__":
     user_input = "Please extract the profile from this resume at (./Resumes/cv2.pdf) and find top 10 job matches based on the instructions. Follow every step mentioned to you to get to the goal"
-    # print(type(user_input))
-    # print("User Input:", user_input)
-    # print("Expected input keys:", agent.input_keys)
+
 
     response = base_agent.invoke({
          "input": user_input
