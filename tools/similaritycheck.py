@@ -106,5 +106,4 @@ process_jobs_tool = Tool(
         "- 'experience_list': list of experience levels (e.g., ['Internship', 'Entry Level'])\n"
         "- 'workplace_type': list of workplace types (e.g., ['Remote', 'On-site'])"
     )
-
 )

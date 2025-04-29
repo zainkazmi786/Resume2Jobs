@@ -1,7 +1,8 @@
 # agent initializer.py
 import sys
 import os
-from streaming_executor import StreamingAgentExecutor
+from agent.streaming_executor import StreamingAgentExecutor
+# from streaming_executor import StreamingAgentExecutor
 
 
 # Add the project root to Python path

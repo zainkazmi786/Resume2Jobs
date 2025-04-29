@@ -10,8 +10,10 @@ def check_job_records(input_data) -> list:
     try:
         if isinstance(input_data, str):
             input_dict = json.loads(input_data)
-        else:
+        elif isinstance(input_data, dict):
             input_dict = input_data
+        else:
+            return {"error": "Invalid input format. Input must be a JSON string or dictionary."}
     except json.JSONDecodeError:
         return {"error": "Invalid input format. Must be a JSON string with proper keys."}
 
