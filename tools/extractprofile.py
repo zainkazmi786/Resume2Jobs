@@ -55,7 +55,7 @@ def get_optimized_keywords(text):
         - **Ensure JSON output remains valid and well-structured.**
         - **also extract the email from the text**
         - **extract the total experience in years from the text (experience includes jobs or internships) calculate based on the time metioned in resume**
-        - **Extract 1-5 most relevant and specific job titles from the resume that are likely to be found on linkedin and are relevant to the text (the person is likely to as those job titles) **  
+        - **Extract 1-3 most relevant and specific job titles from the resume that are likely to be found on linkedin and are relevant to the text (the person is likely to as those job titles) **  
         - **Extract the experience level of the person from the text (internship, entry level, associate, mid-senior level, director, executive) it can be more than 1 **
         - **Extract the loction**  "city , country"--
 

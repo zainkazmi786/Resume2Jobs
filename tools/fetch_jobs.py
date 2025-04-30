@@ -412,7 +412,7 @@ def get_stealth_driver():
         chrome_options.add_argument("--allow-running-insecure-content")
         chrome_options.add_argument("--disable-software-rasterizer")
         chrome_options.add_argument("--disable-webgl")
-        # chrome_options.add_argument("--headless")  # optional
+        chrome_options.add_argument("--headless")  # optional
 
         service = Service("C:/Users/Hp/Downloads/chromedriver-win64/chromedriver.exe")
         driver = webdriver.Chrome(service=service, options=chrome_options)

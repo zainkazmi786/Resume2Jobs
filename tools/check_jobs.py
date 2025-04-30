@@ -41,7 +41,7 @@ def check_job_records(input_data) -> list:
             "country": country,
             "$or": [
                 {"city": city},
-                {"remote": True}
+                {"remote": True} 
             ],
             "experience_levels": {"$in": experience_list},
             "workplace_type": {"$in": workplace_type}

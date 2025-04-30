@@ -3,14 +3,14 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ResumeUpload from "./components/resumeupload";
 import Progress from "./components/progress";
-import AgentInterface from "./components/agentinterface";
+import TitlePage from "./components/titlepage";
 
 function App() {
   return (
-    // <AgentInterface/>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<ResumeUpload />} />
+        <Route path="/" element={<TitlePage />} />
+        <Route path="/upload" element={<ResumeUpload />} />
         <Route path="/progress" element={<Progress />} />
       </Routes>
     </BrowserRouter>

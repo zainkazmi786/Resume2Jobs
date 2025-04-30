@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from "react";
 import { FileText, Search, Database, Cog, Mail } from "lucide-react";
 
-const WorkflowDiagram = ({ activeStep }) => {
-  const [highlightedStep, setHighlightedStep] = useState(activeStep || 0);
+const WorkflowDiagram = ({ isAnimating = false, activeStep = null }) => {
+  const [highlightedStep, setHighlightedStep] = useState(0);
   
   const steps = [
     { 
@@ -33,17 +33,19 @@ const WorkflowDiagram = ({ activeStep }) => {
     }
   ];
 
-  // Animation effect to cycle through steps when processing
+  // Animation effect to cycle through steps when isAnimating is true
   useEffect(() => {
-    if (activeStep === undefined) {
+    // Only animate if specifically told to animate
+    if (isAnimating) {
       const interval = setInterval(() => {
         setHighlightedStep((prev) => (prev + 1) % steps.length);
-      }, 1500);
+      }, 2000);
       return () => clearInterval(interval);
-    } else {
+    } else if (activeStep !== null) {
+      // If a specific step is requested and not animating
       setHighlightedStep(activeStep);
     }
-  }, [activeStep, steps.length]);
+  }, [isAnimating, activeStep, steps.length]);
 
   return (
     <div className="my-8">
